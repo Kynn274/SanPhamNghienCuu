@@ -1,21 +1,28 @@
-import Footer from '../components/footer';
-import Sidebar from '../components/sidebar_unlog';
-import Hero from '../components/hero';
+import Footer from '@/components/footer';
+import Sidebar from '@/components/sidebar_unlog';
+import Hero from '@/components/main_components/hero';
 import Courses from '@/components/courses';
+import TopicBox from '@/components/main_components/topic_box';
+import TopCourses from '@/components/main_components/top_courses';
+import Offers from '@/components/main_components/offers'; 
+
 import { Container } from 'postcss';
 
 export default function Home() {
   return (
     <>
       <body>
-        <div id="container" className="flex flex-row items-start justify-between min-h-screen">
+        <div id="container" className=" min-h-screen">
           <Sidebar />
-          <main className="bg-white w-[calc(100%-60px)] z-2">
+          <main className="bg-white w-full z-2 pl-[50px]">
             <Hero />
+            <TopicBox />
+            <TopCourses />
             <Courses />
+            <Offers />
+            <Footer />
           </main>
         </div>
-        <Footer />
       </body>
     </>
   );
